@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Roboto+Slab:wght@200;400;500;600&display=swap');
+/* varibles de colores */
+:root{
+  --fondo:#F4F6F7;
+  --navbar1:#BB8FCE;
+  --navbar2:#6C3483;
+  --spanLogo1:#FDFEFE;
+  --spanLogo2:#ECF0F1;
+  --spanLogo3:#AEB6BF;
+  --spamA:#FDFEFE;
+  --letterLinks:#EBEDEF;
+  --letterLinka-hover:#AEB6BF;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: var(--fondo);
+}
+/* contenedor */
+.contenedor{
+  width: 100%;
+  position: relative;
+}
+/* seccion Encabezado */
+/* header */
+header{
+  width: 100%;
+  height: 4.2rem;
+  background: linear-gradient(var(--navbar1),var(--navbar2));
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  line-height: 4.2rem;
+  z-index: 500;
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+  overflow: visible;
+}
+li{
+  margin: 0px 20px;
+  list-style: none;
+  height: 4.2rem;
+}
+a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--letterLinks);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;   
+  transition: 0.4s ease; 
+  overflow: hidden;
+  border: 2px solid var(--fondo);
+  border-radius: 5px;
+}
+a:hover{
+  animation-duration: 0.4s;
+  animation-name: barra;
+  animation-iteration-count: 3;
+  color: var(--letterLinka-hover);
+  /* border-color: var(--navbar2); */
+}
+/* animacion a */
+@keyframes barra{
+  0%{
+    border-right: 2px solid var(--navbar2);
+  }
+  50%{
+    border-bottom: 2px solid var(--navbar2);
+  }
+  80%{
+    border-left: 2px solid var(--navbar2);
+  }
+  100%{
+    border-top: 2px solid var(--navbar2);
+  }
+  /* nota cambiar los borders por box-shadows */
+}
+/* lineas */
+.lineSpan{
+  position: absolute;
+  height: 1px;
+  transform: rotate(-30deg);
+}
+.span1{
+  width: 150px;
+  top: 30px;
+  left:7%;
+  background:var(--spanLogo1);
+}
+.span2{
+  width: 150px;
+  top: 30px;
+  left:14%;
+  background: var(--spanLogo2);
+}
+.span3{
+  width: 150px;
+  top: 30px;
+  left:21%;
+  background: var(--spanLogo3);
+}
+.span4{
+  width: 150px;
+  top: 30px;
+  left:28%;
+  background: var(--fondo);
+}
+.lineSpan2{
+  position: absolute;
+  height: 1px;
+  transform: rotate(30deg);
+}
+.span5{
+  width: 150px;
+  top: 30px;
+  right:21%;
+  background:var(--spanLogo1);
+}
+.span6{
+  width: 150px;
+  top: 30px;
+  right:28%;
+  background: var(--spanLogo2);
+}
+.span7{
+  width: 150px;
+  top: 30px;
+  right:35%;
+  background: var(--spanLogo3);
+}
+.span8{
+  width: 150px;
+  top: 30px;
+  right:42%;
+  background: var(--fondo);
+}
+/* logo */
+.logo{
+  width: 20%;
+  height: 4.2rem;
+  z-index: 2;
+}
+.logo img{
+  width: 65px;
+  height: 65px;
+  margin-left: 7px;
+  cursor: pointer;
+
+}
+/* linea del header */
+.lineaHoriz{
+  /* width: 100%; */
+  height: 2px;
+  position: absolute;
+  background-color: var(--navbar1);
+  top:4.05rem;
+  z-index: 1;
+  animation-name: lineH;
+  animation-duration: 1s;
+}
+/* animacion linea en movimiento */
+@keyframes lineH{
+  0%{
+    width: 0%;
+  }
+  25%{
+    width: 25%;
+  }
+  50%{
+    width: 50%;
+  }
+  75%{
+    width: 75%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+/* toggle */
+.toggle{
+  display: none;
+  width: 45px;
+  height: 45px;
+  margin: 2px 4px;
+  z-index: 3000;
+}
+.barras{
+  display: inherit;
+  width: 25px;
+  height: 2px;
+  background: var(--letterLinks);
+  margin: 10px 8px;
+  z-index: 300;
+  transition: all 0.5s ease;
+}
+.toggle:hover{
+  cursor: pointer;
+}
+#home{
+  /* margin-top: 20px; */
+  background-color: none;
+  width: 100%;
+  height: 4.2rem;
+}
+/* seccion texto */
+/* titulo */
+h2{
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;  text-align: center;
+  margin: 10px 0;
+  color: black;
+}
+/* contenido */
+#bikes{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1, auto);
+  grid-column: span 2;
+  grid-gap: 10px;
+  margin-left:6%;
+  font-family: 'Roboto Slab', serif;  
+  margin-bottom: 4.2rem;
+}
+#img{
+  width: 80%;
+  border-radius: 5px;
+  
+}
+#text{
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#description{
+  text-align: left;
+  font-weight: 300;
+}
+#price{
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+/* pie de pagina */
+footer{
+  max-width: 100%;
+  height: 4.2rem;
+  background:black ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  top: 100%;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+footer > h3{
+  font-size: 1.2em;
+  font-weight: 300;
+}
+footer > p{
+  font-size: 1em;
+  font-weight: 400;
+}
+/* seccion resposive disign */
+@media only screen and (max-width: 768px) {
+  /* encabezado */
+  header{
+    height: 3.4rem;
+    overflow: visible;
+  }
+  ul{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.2rem;
+    background-color: var(--navbar1);
+    top: 6%;
+    left: 100%;
+    transition: all 0.5s ease;
+    z-index: 2000000;
+  }
+  ul.active{
+    left: 0%;
+    /* background-color: red !important; */
+  }
+  a {
+    color: white;
+    border: none;
+  }
+  a:hover{
+    animation-name: none;
+  }
+  li{
+    text-align: center;
+    width: 100%;
+  }
+  .navbar{
+    line-height: 3.4rem;
+  }
+  /* logo */
+  .logo{
+    height: 3.4rem;
+  }
+  .logo > img{
+    width: 52px;
+    height: 52px;
+  }
+  /* linea de carga */
+  .lineaHoriz{
+    top:3.4rem;
+  }
+  /* lineas del nav */
+  .span1{
+    left: 6%;
+  }
+  .span2{
+    left: 12%;
+  }
+  .span3{
+    left: 18%;
+  }
+  .span4{
+    left: 24%;
+  }
+  .span5{
+    right: 6%;
+  }
+  .span6{
+    right: 12%;
+  }
+  .span7{
+    right: 18%;
+  }
+  .span8{
+    right: 24%;
+  }
+  .span1,.span2,.span3,.span4{
+    top: 30%;
+  }
+  .span5,.span6,.span7,.span8{
+    top: 30%;
+  }
+  /* toggle */
+  .toggle{
+    display: block;
+  }
+  .barra1.active{
+    transform: rotate(40deg);
+    background-color: var(--letterLinks);
+    position: absolute;
+    margin-top: 25px;
+  }
+  .barra2.active{
+    display: none;
+  }
+  .barra3.active{
+    transform: rotate(-40deg);
+    background-color: var(--letterLinks);
+    position: absolute;    
+    margin-top: 25px;
+  }
+  /* contenido */
+  #bikes{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #home{
+    height: 3.4rem;
+  }
+  #text{
+    font-size: 1rem;
+  }
+  #description{
+    font-size: 0.7rem;
+  }
+  #price{
+    font-size: 0.8rem;
+  }
+}

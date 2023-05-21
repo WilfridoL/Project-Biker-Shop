@@ -1,0 +1,46 @@
+{
+  "bikes":[
+    {
+      "id": 1,
+      "img":"img/urban-cruiser.jpeg",
+      "name":"Urban Cruiser",
+      "description":"Perfecta para desplazarse por la ciudad",
+      "price":"$420"
+    },
+    {
+      "id": 2,
+      "img":"img/e-bike-commuter.jpeg",
+      "name":"E-Bike Commuter",
+      "description":"Con un motor eléctrico integrado",
+      "price":"$500"
+    },
+    {
+      "id": 3,
+      "img":"img/fold-n-go.jpeg",
+      "name":"Fold'n Go",
+      "description":"Ideal para los viajeros y para aquellos con poco espacio de almacenamiento",
+      "price":"$180"
+    },
+    {
+      "id": 4,
+      "img":"img/elite-pro.jpeg",
+      "name":"Elite Pro",
+      "description":"Bicicleta de alta gama para carretera",
+      "price":"$720"
+    },
+    {
+      "id": 5,
+      "img":"img/gravel-explorer.jpeg",
+      "name":"Gravel Explorer",
+      "description":"Perfecta para la exploración todoterreno",
+      "price":"$359"
+    },
+    {
+      "id": 6,
+      "img":"img/trailblazer.jpeg",
+      "name":"Trailblazer",
+      "description":"Perfecta para el ciclista aventurero",
+      "price":"$410"
+    }
+  ]
+}
