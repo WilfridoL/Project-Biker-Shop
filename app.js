@@ -18,7 +18,7 @@ toggleNav.addEventListener('click', () => {
   barra3.classList.toggle("active");
 })
 // productos del archivo JSON
-fetch('/data.json').then(response => response.json()).then(data => {
+fetch('./data.json').then(response => response.json()).then(data => {
   const datos = data.bikes;
   // creacion de contenedores
   for (let i = 0; i < datos.length; i++){
